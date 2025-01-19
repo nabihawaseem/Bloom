@@ -1,0 +1,15 @@
+name,address,food,price,magic_hours,latitude,longitude
+Green Cafe,123 Broadway, Vegan Salads, $5, 6:00 PM - 8:00 PM, 40.7128, -74.0060
+Fresh Bakery,456 Canal Street, Pastries, $3, 5:00 PM - 7:00 PM, 40.7208, -74.0050
+Healthy Bites,789 Spring Street, Gluten-Free Sandwiches, $6, 11:00 AM - 2:00 PM, 40.7221, -74.0035
+City Pizzeria,101 Main Street, Pizzas, $8, 12:00 PM - 2:00 PM, 40.7308, -73.9970
+Sunset Deli,202 Houston Street, Wraps & Smoothies, $7, 10:00 AM - 1:00 PM, 40.7282, -73.9996
+Ocean Grill,303 7th Avenue, Seafood Platters, $12, 4:00 PM - 6:00 PM, 40.7433, -73.9932
+Downtown Cafe,404 Broadway, Organic Coffee, $4, 8:00 AM - 10:00 AM, 40.7101, -74.0101
+Bistro Bliss,505 West Broadway, French Pastries, $5, 3:00 PM - 5:00 PM, 40.7242, -74.0007
+Curry Corner,606 Lexington Avenue, Indian Cuisine, $10, 6:00 PM - 9:00 PM, 40.7527, -73.9772
+Taco Haven,707 Mulberry Street, Mexican Tacos, $6, 5:00 PM - 7:00 PM, 40.7185, -74.0014
+Eiffel Eatery,808 Prince Street, Crepes & Croissants, $7, 7:00 AM - 9:00 AM, 40.7249, -73.9946
+Tokyo Treats,909 Greenwich Street, Sushi Platters, $15, 6:00 PM - 8:00 PM, 40.7391, -74.0075
+Harvest House,1111 Orchard Street, Vegan Bowls, $9, 12:00 PM - 2:00 PM, 40.7226, -73.9874
+Mount Diner,1212 Hudson Street, Burgers & Fries, $8, 6:00 PM - 8:00 PM, 40.7430, -74.0048
