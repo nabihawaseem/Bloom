@@ -1,12 +1,19 @@
 import os
 from groq import Groq
+import streamlit as st
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
-api_key = os.getenv("GROQ_API_KEY")
+# Load environment variables from .env for local development
+dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
+
+# Retrieve the GROQ_API_KEY securely
+api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
 if not api_key:
-    raise ValueError("GROQ_API_KEY is not set. Please check your .env file.")
+    raise ValueError("GROQ_API_KEY is not set. Please check your configuration (Streamlit Secrets or .env).")
+
+# Initialize the Groq client
 client = Groq(api_key=api_key)
 
 def generate_quiz_questions(user_focus):
@@ -25,10 +32,8 @@ def generate_quiz_questions(user_focus):
         questions = [q.strip() for q in raw_questions.split("\n") if q.strip().startswith("Q")]
         return questions[:5]  # Limit to 5 questions
     except Exception as e:
-        print(f"Error generating quiz questions: {e}")
+        st.error(f"Error generating quiz questions: {e}")
         return ["Could not generate quiz questions. Please try again."]
-
-
 
 def interpret_answers(answers, user_focus):
     """
@@ -51,5 +56,5 @@ def interpret_answers(answers, user_focus):
         tips = [line for line in lines if line.startswith("- Tip")]
         return {"score": score.split(":")[1].strip(), "tips": tips}
     except Exception as e:
-        print(f"Error interpreting answers: {e}")
+        st.error(f"Error interpreting answers: {e}")
         return {"score": "N/A", "tips": ["Could not generate recommendations. Please try again."]}
