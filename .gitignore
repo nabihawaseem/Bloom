@@ -1,14 +1,16 @@
-# Ignore Python cache files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Ignore environment configuration files
-.env
-
-# Ignore virtual environments
-virtual/
-.venv/
+# Ignore Python virtual environments
 venv/
-env/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+.env
+# Ignore logs and temporary files
+*.log
+*.tmp
+# Ignore Streamlit secrets
+.streamlit/secrets.toml
